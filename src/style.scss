@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+#root {
+  width: 35%;
+}
+.todo{
+  min-height: 350px;
+  width: 100%;
+  padding: 20px 30px;
+  background: white;
+  border-radius: 10px;
+  &__title{
+    text-align: center;
+    color: gray;
+  }
+  &__cont_top{
+    row-gap: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__field{
+      width: calc(80% - 10px);
+      height: 40px;
+      outline: none;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+    &__btn{
+      width: calc(20% - 10px);
+      height: 40px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      background: none;
+      cursor: pointer;
+    }
+  }
+  &__content{
+    min-height: 200px;
+    &__errorCont {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__text{
+        color: gray;
+      }
+    }
+    &__tasksCont{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      &__task{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 20px;
+        border-radius: 3px;
+        border: 1px solid gray;
+        padding: 10px;
+        &__checkbox {
+
+        }
+        &__text{
+          color: gray;
+        }
+        &__editInput {
+          width: 50%;
+          height: 40px;
+          outline: none;
+          border: 1px solid gray;
+          border-radius: 5px;
+          padding-left: 10px;
+        }
+        &__btn {
+          height: 30px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          background: none;
+          cursor: pointer;
+          padding: 0 15px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  &__footer {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__conditions {
+      display: flex;
+      column-gap: 10px;
+      &__btn{
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background: none;
+        cursor: pointer;
+        padding: 0 15px;
+      }
+    }
+  }
+}
